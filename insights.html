@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced KPMG Mockup</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Mobile View (Small Screens) */
+        @media (max-width: 575.98px) {
+            .navbar-brand img {
+                width: 150px;
+                /* Resize logo for smaller screens */
+            }
+
+            .navbar-nav {
+                text-align: center;
+                /* Center navigation items */
+            }
+
+            .form-control {
+                width: 100%;
+                /* Full-width search bar */
+            }
+
+            .btn-outline-primary {
+                width: 100%;
+                /* Full-width button for search */
+            }
+        }
+
+        /* Tablet View (Medium Screens) */
+        @media (min-width: 576px) and (max-width: 991.98px) {
+            .navbar-brand img {
+                width: 200px;
+                /* Resize logo */
+            }
+
+            .navbar-nav {
+                margin-top: 1rem;
+                /* Add spacing between links and search bar */
+            }
+
+            .form-control {
+                width: 75%;
+                /* Reduce search bar width */
+            }
+        }
+
+        /* Desktop View (Large Screens) */
+        @media (min-width: 992px) {
+            .navbar-brand img {
+                width: 240px;
+                /* Full-size logo */
+            }
+
+            .form-control {
+                width: auto;
+                /* Auto-size search bar */
+            }
+
+            .btn-outline-primary {
+                width: auto;
+                /* Auto-size button */
+            }
+
+            .navbar-brand {
+                margin-left: -100px;
+                /* Adjust this value as needed */
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                margin-left: 0;
+                /* Reset any margin */
+            }
+        }
+
+
+
+        footer ul li a {
+            color: #555;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        footer a i {
+            transition: transform 0.3s ease;
+        }
+
+        footer a:hover i {
+            transform: scale(1.1);
+        }
+
+        footer img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        #carouselExampleControls {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .carousel-inner {
+            border-radius: 15px;
+            overflow: hidden;
+            /* Ensures the images are clipped to the rounded corners */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 576px) {
+            #carouselExampleControls {
+                padding: 0;
+                /* Remove extra padding for mobile */
+            }
+
+            .carousel-inner img {
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        }
+        .card {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      height: 150px;
+      object-fit: cover;
+    }
+    .card-body {
+      min-height: 120px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/Work-Horse.png" alt="Logo" class="logo">
+            </a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            <i class="fas fa-home me-2"></i> Home
+                        </a>
+                    </li>
+
+                    <!-- Dropdown: Services -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/services.html" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-briefcase me-2"></i> Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Business Strategy Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">IT Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Operations Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing and Sales Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Sustainability and Environmental Consulting</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Insights -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/insights.html">
+                            <i class="fas fa-lightbulb me-2"></i> Insights
+                        </a>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactus.html">
+                            <i class="fas fa-envelope me-2"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus.html">
+                            <i class="fas fa-info-circle me-2"></i> About Us
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://img.freepik.com/free-photo/analytics-comparison-information-networking-concept_53876-15846.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                    class="d-block w-100" alt="Analytics Dashboard">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/premium-photo/collaborative-meeting-indian-financial-consultants-using-laptop-discuss-stock-market-strategies-contemporary-corporate-setting_1291600-4028.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                    class="d-block w-100" alt="Team Collaboration">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/free-photo/crop-girls-discussing-analysis-data_23-2147764686.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                    class="d-block w-100" alt="Data Discussion">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Featured Insights -->
+    <section class="featured-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4"><i>Featured Insights</i></h2>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://assets.kpmg.com/is/image/kpmgcloud/global-audit-esg:cq5dam-web-1120-684?wid=560&hei=342"
+                            class="card-img-top" alt="Energy transition">
+                        <div class="card-body">
+                            <a href="">
+                                <h5 class="card-title">AI financial reporting and audit: Navigating the new era</h5>
+                            </a>
+                            <p class="card-text">Financial reporting leaders’ AI expectations for their companies and
+                                external auditors.</p>
+                            <a href="#" class="text-decoration-none text-primary">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://assets.kpmg.com/is/image/kpmgcloud/glass-building-plants-walkway-1:cq5dam-web-1120-684?wid=560&hei=342"
+                            class="card-img-top" alt="Greenwashing challenges">
+                        <div class="card-body">
+                            <a href="">
+                                <h5 class="card-title">Anchoring ESG in Governence</h5>
+                            </a>
+                            <p class="card-text">Taking a strategic approach towards corporate governance, board-level
+                                responsibility and reporting</p>
+                            <a href="#" class="text-decoration-none text-primary">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://assets.kpmg.com/is/image/kpmgcloud/falkirk-wheel-sunset:cq5dam-web-1120-684?wid=560&hei=342"
+                            class="card-img-top" alt="Climate and decarbonization">
+                        <div class="card-body">
+                            <a href="">
+                                <h5 class="card-title">Venture Pluse Q2 2024</h5>
+                            </a>
+                            <p class="card-text">KPMG Private Enterprise quarterly global report on venture capital
+                                trends.</p>
+                            <a href="#" class="text-decoration-none text-primary">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- coursele -->
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card">
+              <img src="https://assets.kpmg.com/is/image/kpmgcloud/multi-colored-lines-with-blue-bakcground:cq5dam-web-1120-684?wid=560&hei=342" class="card-img-top" alt="Cryptoasset risk">
+              <div class="card-body">
+                <h5 class="card-title">Cryptoasset Risk</h5>
+                <p class="card-text">Key components of the FCA’s Consumer Duty and how it fits with the existing FCA framework.</p>
+                <a href="#" class="btn btn-link text-decoration-none">Read more <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card">
+              <img src="https://assets.kpmg.com/is/image/kpmgcloud/mountain-rock-climber:cq5dam-web-1120-684?wid=560&hei=342" class="card-img-top" alt="Basel Reforms">
+              <div class="card-body">
+                <h5 class="card-title">Basel Reforms</h5>
+                <p class="card-text">Key components of the FCA’s Consumer Duty and how it fits with the existing FCA framework.</p>
+                <a href="#" class="btn btn-link text-decoration-none">Read more <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card">
+              <img src="https://assets.kpmg.com/is/image/kpmgcloud/abstract-network-of-lines-and-dots-banner:cq5dam-web-1120-684?wid=560&hei=342" class="card-img-top" alt="Regulatory Cooperation">
+              <div class="card-body">
+                <h5 class="card-title">Regulatory Cooperation</h5>
+                <p class="card-text">Key components of the FCA’s Consumer Duty and how it fits with the existing FCA framework.</p>
+                <a href="#" class="btn btn-link text-decoration-none">Read more <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card">
+              <img src="https://assets.kpmg.com/is/image/kpmgcloud/motorway-road-alongside-sea:cq5dam-web-1120-684?wid=560&hei=342" class="card-img-top" alt="Consumer Duty">
+              <div class="card-body">
+                <h5 class="card-title">Duty Requirements?</h5>
+                <p class="card-text">Key components of the FCA’s Consumer Duty and how it fits with the existing FCA framework.</p>
+                <a href="#" class="btn btn-link text-decoration-none">Read more <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+
+      <footer class="bg-light text-dark py-5">
+        <div class="container">
+            <!-- Top Row: Branding and Subscription -->
+
+
+            <!-- Middle Row: Navigation Links and App Store -->
+            <div class="row border-top border-bottom py-4">
+                <!-- Navigation Links -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <h6 class="fw-bold">Company</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/index.html" class="text-dark text-decoration-none">Home</a></li>
+                                <li><a href="/aboutus.html" class="text-dark text-decoration-none">About Us</a></li>
+                                <!-- <li><a href="/services.html" class="text-dark text-decoration-none">Services</a></li> -->
+                                <li><a href="/insights.html" class="text-dark text-decoration-none">Insights</a></li>
+                                <li><a href="/contactus.html" class="text-dark text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-md-4 mb-3">
+                            <h6 class="fw-bold">Resources</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-dark text-decoration-none">Insights</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">White Papers</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Events</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Webinars</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="col-md-4 mb-3">
+                            <h6 class="fw-bold">Support</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/contactus.html" class="text-dark text-decoration-none">Contact Us</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">FAQ</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Privacy Policy</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h5 class="fw-bold">Work Horse</h5>
+                            <p>Get insights and updates delivered directly to your inbox.</p>
+                            <form class="d-flex flex-wrap">
+                                <input type="email" class="form-control me-2 mb-2" placeholder="Enter your email"
+                                    required>
+                                <button class="btn btn-primary mb-2" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Social Media and Copyright -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <!-- Social Media Icons -->
+                    <h6 class="fw-bold">Follow Us</h6>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#" class="text-dark"><i class="fas fa-rss fa-2x"></i></a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <!-- Copyright -->
+                    <p class="mb-0 small">&copy; 2021-2024 Work Horse. All rights reserved.</p>
+                    <p class="mb-0 small">Built with passion for insights and innovate Web Pages.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
