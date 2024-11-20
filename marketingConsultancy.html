@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced KPMG Mockup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Mobile View (Small Screens) */
+        @media (max-width: 575.98px) {
+            .navbar-brand img {
+                width: 150px;
+                /* Resize logo for smaller screens */
+            }
+
+            .navbar-nav {
+                text-align: center;
+                /* Center navigation items */
+            }
+
+            .form-control {
+                width: 100%;
+                /* Full-width search bar */
+            }
+
+            .btn-outline-primary {
+                width: 100%;
+                /* Full-width button for search */
+            }
+        }
+
+        /* Tablet View (Medium Screens) */
+        @media (min-width: 576px) and (max-width: 991.98px) {
+            .navbar-brand img {
+                width: 200px;
+                /* Resize logo */
+            }
+
+            .navbar-nav {
+                margin-top: 1rem;
+                /* Add spacing between links and search bar */
+            }
+
+            .form-control {
+                width: 75%;
+                /* Reduce search bar width */
+            }
+        }
+
+        /* Desktop View (Large Screens) */
+        @media (min-width: 992px) {
+            .navbar-brand img {
+                width: 240px;
+                /* Full-size logo */
+            }
+
+            .form-control {
+                width: auto;
+                /* Auto-size search bar */
+            }
+
+            .btn-outline-primary {
+                width: auto;
+                /* Auto-size button */
+            }
+
+            .navbar-brand {
+                margin-left: -100px;
+                /* Adjust this value as needed */
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                margin-left: 0;
+                /* Reset any margin */
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://img.freepik.com/free-photo/business-scene-top-view_23-2147626514.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            height: 700px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero-section .btn {
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+        }
+
+        .services .card {
+            transition: transform 0.3s;
+        }
+
+        .services .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer ul li a {
+            color: #555;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        footer a i {
+            transition: transform 0.3s ease;
+        }
+
+        footer a:hover i {
+            transform: scale(1.1);
+        }
+
+        footer img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/Work-Horse.png" alt="Logo" class="logo">
+            </a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            <i class="fas fa-home me-2"></i> Home
+                        </a>
+                    </li>
+
+                    <!-- Dropdown: Services -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-briefcase me-2"></i> Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Business Strategy Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">IT Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Operations Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing and Sales Consulting</a></li>
+                            <li><a class="dropdown-item" href="#">Sustainability and Environmental Consulting</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Insights -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/insights.html">
+                            <i class="fas fa-lightbulb me-2"></i> Insights
+                        </a>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactus.html">
+                            <i class="fas fa-envelope me-2"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus.html">
+                            <i class="fas fa-info-circle me-2"></i> About Us
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <div class="container">
+            <br><br><br><br><br>
+            <h1>Businesses Strategy Globally</h1>
+            <p>We provides expert advice and guidance to organizations on how to formulate, implement, and evaluate
+                strategies that drive long-term growth and success.</p>
+            <br><br><br>
+            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+            <a href="/contactus.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+        </div>
+    </section>
+    <!-- 3rd section -->
+    <section class="featured-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4"><i>Our Strategies</i> </h2>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/free-photo/asian-woman-standing-window-office-looking-printouts-with-business-graphs-glass_1098-20215.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Energy transition">
+                        <div class="card-body">
+                            <h5 class="card-title">Strategic Planning</h5>
+                            <p class="card-text">Vision & Mission Development Helping businesses clarify their purpose,
+                                long-term goals, and core values.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Assisting in identifying potential acquisitions, conducting due diligence, and integrating new businesses. Identifying strategic partnerships that can boost a company’s growth potential.
+                                </p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/premium-photo/hand-businesswoman-putting-growing-plants-with-increase-chart_117255-1805.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Greenwashing challenges">
+                        <div class="card-body">
+                            <h5 class="card-title">Growth Strategy</h5>
+                            <p class="card-text">Advising on how to enter new markets (geographical or product-based),
+                                and which segments to target.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Assisting in identifying potential acquisitions, conducting due diligence, and integrating new businesses.Identifying strategic partnerships that can boost a company’s growth potential.</p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/premium-vector/businessman-showing-graph-stock-financial-trading-market-diagram-concept-flat-illustration_720185-2736.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Climate and decarbonization">
+                        <div class="card-body">
+                            <h5 class="card-title">Cost Optimization & Efficiency</h5>
+                            <p class="card-text">Analyzing business processes and recommending ways to streamline
+                                operations, reduce waste, and cut costs.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Ensuring the right allocation of resources (capital, human, and technological) to maximize returns.</p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="container">
+            <br><br>
+            <div class="row g-4">
+                <!-- Card 4 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/free-vector/illustration-data-analysis-graph_53876-18131.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Energy transition">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Transformation</h5>
+                            <p class="card-text">Helping businesses adopt new technologies, improve their digital
+                                presence, and enhance operational agility.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Integrating analytics and data insights into the decision-making process for more informed, effective strategies.</p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/premium-photo/people-examine-easel-with-calculations_72572-1799.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Greenwashing challenges">
+                        <div class="card-body">
+                            <h5 class="card-title">Competitive Strategy</h5>
+                            <p class="card-text">Helping businesses stand out in a competitive market by developing
+                                unique value propositions.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Advising on optimal pricing models that balance profitability with customer appeal.Defining how a brand is perceived in the market and devising strategies to strengthen brand equity.</p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://img.freepik.com/premium-photo/wooden-figure-man-with-painted-crown-successful-business-team-leader-concept_106035-2821.jpg?ga=GA1.1.1715263824.1730872554&semt=ais_hybrid"
+                            class="card-img-top" alt="Climate and decarbonization">
+                        <div class="card-body">
+                            <h5 class="card-title">Leadership & Change Management</h5>
+                            <p class="card-text">Structuring teams, departments, and roles to support the overall
+                                strategy.</p>
+                            <div class="extra-content" style="display:none;">
+                                <p>Coaching executives and management to align their vision and actions with company goals.Guiding companies through organizational changes, such as restructuring or adopting new strategies.</p>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary read-more-btn">Read more <i
+                                    class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-light text-dark py-5">
+        <div class="container">
+            <!-- Top Row: Branding and Subscription -->
+
+
+            <!-- Middle Row: Navigation Links and App Store -->
+            <div class="row border-top border-bottom py-4">
+                <!-- Navigation Links -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <h6 class="fw-bold">Company</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/index.html" class="text-dark text-decoration-none">Home</a></li>
+                                <li><a href="/aboutus.html" class="text-dark text-decoration-none">About Us</a></li>
+                                <!-- <li><a href="/services.html" class="text-dark text-decoration-none">Services</a></li> -->
+                                <li><a href="/insights.html" class="text-dark text-decoration-none">Insights</a></li>
+                                <li><a href="/contactus.html" class="text-dark text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-md-4 mb-3">
+                                <h6 class="fw-bold">Resources</h6>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-dark text-decoration-none">Insights</a></li>
+                                    <li><a href="#" class="text-dark text-decoration-none">White Papers</a></li>
+                                    <li><a href="#" class="text-dark text-decoration-none">Events</a></li>
+                                    <li><a href="#" class="text-dark text-decoration-none">Webinars</a></li>
+                                </ul>
+                            </div> -->
+                        <div class="col-md-4 mb-3">
+                            <h6 class="fw-bold">Support</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/contactus.html" class="text-dark text-decoration-none">Contact Us</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">FAQ</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Privacy Policy</a></li>
+                                <li><a href="#" class="text-dark text-decoration-none">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h5 class="fw-bold">Work Horse</h5>
+                            <p>Get insights and updates delivered directly to your inbox.</p>
+                            <form class="d-flex flex-wrap">
+                                <input type="email" class="form-control me-2 mb-2" placeholder="Enter your email"
+                                    required>
+                                <button class="btn btn-primary mb-2" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Social Media and Copyright -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <!-- Social Media Icons -->
+                    <h6 class="fw-bold">Follow Us</h6>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#" class="text-dark"><i class="fas fa-rss fa-2x"></i></a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <!-- Copyright -->
+                    <p class="mb-0 small">&copy; 2021-2024 Work Horse. All rights reserved.</p>
+                    <p class="mb-0 small">Built with passion for insights and innovate Web Pages.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to toggle "Read more" and "Read less" functionality
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+                const extraContent = this.previousElementSibling; // Get the content to toggle
+                const isContentVisible = extraContent.style.display === 'block'; // Check if the content is visible
+
+                // Toggle the content visibility and button text
+                extraContent.style.display = isContentVisible ? 'none' : 'block';
+                this.innerHTML = isContentVisible ? 'Read more <i class="fas fa-arrow-right ms-1"></i>' : 'Read less <i class="fas fa-arrow-left ms-1"></i>';
+            });
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+</html>
